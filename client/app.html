@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bangalore Home Price Prediction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- jQuery primero -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="app.css">
+  <!-- JS (al final del body también valdría) -->
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="img"></div>
+
+  <form class="form" onsubmit="return false;">
+    <h2>Area (Square Feet)</h2>
+    <input class="area" type="text" id="uiSqft" name="Squareft" value="1000" />
+    
+    <h2>Bedrooms</h2>
+    <div class="switch-field">
+      <input type="radio" id="radio-broom-1" name="uiBroom" value="1" />
+      <label for="radio-broom-1">1</label>
+      <input type="radio" id="radio-broom-2" name="uiBroom" value="2" checked />
+      <label for="radio-broom-2">2</label>
+      <input type="radio" id="radio-broom-3" name="uiBroom" value="3" />
+      <label for="radio-broom-3">3</label>
+      <input type="radio" id="radio-broom-4" name="uiBroom" value="4" />
+      <label for="radio-broom-4">4</label>
+      <input type="radio" id="radio-broom-5" name="uiBroom" value="5" />
+      <label for="radio-broom-5">5</label>
+    </div>
+  </form>
+
+  <form class="form" onsubmit="return false;">
+    <h2>Bath</h2>
+    <div class="switch-field">
+      <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1" />
+      <label for="radio-bath-1">1</label>
+      <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked />
+      <label for="radio-bath-2">2</label>
+      <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3" />
+      <label for="radio-bath-3">3</label>
+      <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4" />
+      <label for="radio-bath-4">4</label>
+      <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5" />
+      <label for="radio-bath-5">5</label>
+    </div>
+
+    <h2>Location</h2>
+    <div>
+      <select class="location" id="uiLocations">
+        <option value="" disabled selected>Choose a Location</option>
+      </select>
+    </div>
+
+    <button class="submit" type="button" onclick="onClickedEstimatePrice()">Estimate Price</button>
+    <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+  </form>
+</body>
+</html>
